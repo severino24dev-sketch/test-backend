@@ -58,3 +58,11 @@ Request body:
 ```
 
 Response includes route geometry, stop details, trip events, and generated `daily_logs`.
+
+## Railway deploy
+
+Use this start command:
+
+```bash
+python manage.py migrate && gunicorn backend.wsgi --bind 0.0.0.0:$PORT
+```
